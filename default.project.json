@@ -1,0 +1,34 @@
+{
+	"name": "QSERF Compatibility Tasks",
+	"globIgnorePaths": ["**/package.json", "**/tsconfig.json"],
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"$path": "out/ReplicatedStorage",
+			"Runtime": {
+				"$className": "Folder",
+				"$path": "include",
+				"node_modules": {
+					"$className": "Folder",
+					"$path": "node_modules/@rbxts"
+				}
+			}
+		},
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"$path": "out/ServerScriptService"
+		},
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterCharacterScripts": {
+				"$className": "StarterCharacterScripts",
+				"$path": "out/StarterPlayer/StarterCharacterScripts"
+			},
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"$path": "out/StarterPlayer/StarterPlayerScripts"
+			}
+		}
+	}
+}
