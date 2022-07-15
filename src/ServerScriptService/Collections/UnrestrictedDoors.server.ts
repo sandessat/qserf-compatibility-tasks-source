@@ -8,16 +8,13 @@ function InteractDoor(door: TUnrestrictedDoor): void {
 
 	if (door.Settings.IsDoorOpen.Value === false) {
 		Remotes.Server.Get("InteractDoor").SendToAllPlayers("Open", door);
-		door.Content.Body.CFrame = door.Content.Body.CFrame.add(door.Content.Body.CFrame.UpVector.mul(7.2));
-		task.wait(1);
 		door.Settings.IsDoorOpen.Value = true;
 	} else {
 		Remotes.Server.Get("InteractDoor").SendToAllPlayers("Close", door);
-		door.Content.Body.CFrame = door.Content.Body.CFrame.sub(door.Content.Body.CFrame.UpVector.mul(7.2));
-		task.wait(1);
 		door.Settings.IsDoorOpen.Value = false;
 	}
 
+	task.wait(1);
 	door.Settings.Debounce.Value = true;
 }
 
